@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/saved"
+        android:title="Saved in: " />
+
+    <item android:id="@+id/call"
+        android:title="Call" />
+    <item android:id="@+id/msg"
+        android:title="Message" />
+    <item android:id="@+id/other"
+        android:title="Whatsapp/Gmail" />
+
+</menu>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="time.q2.MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="107dp"
+        android:layout_toStartOf="@+id/spinn"
+        android:text="Source"
+        android:textSize="20dp" />
+
+    <Spinner
+        android:id="@+id/spinn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="139dp"></Spinner>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="40dp"
+        android:text="Destination"
+        android:textSize="20dp" />
+
+    <Spinner
+        android:id="@+id/spinn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignStart="@+id/spinn">
+    </Spinner>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="11dp"
+        android:text="Date"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/spinn2"
+        android:layout_alignTop="@+id/textView3"
+        android:ems="10"
+        android:hint="DD--MM--YYYY"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:onClick="onSubmit"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_below="@+id/editText3"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="54dp"
+        android:text="Submit" />
+
+    <Button
+        android:id="@+id/clear"
+        android:onClick="onClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/submit"
+        android:layout_alignBottom="@+id/submit"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="40dp"
+        android:text="Clear" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/spinn"
+        android:layout_marginBottom="28dp"
+        android:layout_toEndOf="@+id/submit"
+        android:text="ToggleButton"
+        android:textOff="One-Way"
+        android:textOn="To and Fro" />
+
+</RelativeLayout>

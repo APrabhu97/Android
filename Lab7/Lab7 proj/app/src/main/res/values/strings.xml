@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Q1</string>
+    <string-array name="contacts">
+        <item>Anish</item>
+        <item>Sau</item>
+        <item>Gau</item>
+        <item>Rhythym</item>
+    </string-array>
+
+</resources>

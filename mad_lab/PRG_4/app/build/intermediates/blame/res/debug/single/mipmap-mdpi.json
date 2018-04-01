@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "E:\\my prg\\CCE-Programs\\MAD\\Lab_7\\PRG_4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher.png",
+        "source": "E:\\my prg\\CCE-Programs\\MAD\\Lab_7\\PRG_4\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\MAD\\mad_lab\\PRG_4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher.png",
+        "source": "D:\\MAD\\mad_lab\\PRG_4\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\my prg\\CCE-Programs\\MAD\\Lab_7\\PRG_4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher_round.png",
+        "source": "E:\\my prg\\CCE-Programs\\MAD\\Lab_7\\PRG_4\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\MAD\\mad_lab\\PRG_4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher_round.png",
+        "source": "D:\\MAD\\mad_lab\\PRG_4\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    }
+]

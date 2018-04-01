@@ -1,0 +1,7 @@
+#Sun Apr 01 18:15:56 IST 2018
+base.0=D\:\\MAD\\mad_lab\\PRG_4\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_7adf9eb530d35176207db3025316ee41e7c14db5
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=D\:\\MAD\\mad_lab\\PRG_4\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_f7f93cf2709b14b3ab5694adb30ec385041180bb\\classes.dex
+base.1=D\:\\MAD\\mad_lab\\PRG_4\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_f7f93cf2709b14b3ab5694adb30ec385041180bb
+file.0=D\:\\MAD\\mad_lab\\PRG_4\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_7adf9eb530d35176207db3025316ee41e7c14db5\\classes.dex

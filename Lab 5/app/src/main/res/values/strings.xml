@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">q3</string>
+    <string-array name="type">
+        <item>Car</item>
+        <item>Bike</item>
+        <item>Scooter</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "E:\\my prg\\CCE-Programs\\MAD\\Lab_7\\PRG_3\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\donut.png",
+        "source": "E:\\my prg\\CCE-Programs\\MAD\\Lab_7\\PRG_3\\app\\src\\main\\res\\drawable\\donut.png"
+    },
+    {
+        "merged": "E:\\my prg\\CCE-Programs\\MAD\\Lab_7\\PRG_3\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\froyo.png",
+        "source": "E:\\my prg\\CCE-Programs\\MAD\\Lab_7\\PRG_3\\app\\src\\main\\res\\drawable\\froyo.png"
+    },
+    {
+        "merged": "D:\\MAD\\mad_lab\\PRG_3\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\froyo.png",
+        "source": "D:\\MAD\\mad_lab\\PRG_3\\app\\src\\main\\res\\drawable\\froyo.png"
+    },
+    {
+        "merged": "D:\\MAD\\mad_lab\\PRG_3\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\donut.png",
+        "source": "D:\\MAD\\mad_lab\\PRG_3\\app\\src\\main\\res\\drawable\\donut.png"
+    },
+    {
+        "merged": "E:\\my prg\\CCE-Programs\\MAD\\Lab_7\\PRG_3\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\eclair.png",
+        "source": "E:\\my prg\\CCE-Programs\\MAD\\Lab_7\\PRG_3\\app\\src\\main\\res\\drawable\\eclair.png"
+    },
+    {
+        "merged": "D:\\MAD\\mad_lab\\PRG_3\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\eclair.png",
+        "source": "D:\\MAD\\mad_lab\\PRG_3\\app\\src\\main\\res\\drawable\\eclair.png"
+    }
+]

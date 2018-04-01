@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="output"><source path="C:\Users\MAHE\.android\build-cache\e9a1bbaccb1fcfde46048f805455ad0d20dec4b6\output\assets"/></dataSet><dataSet config="main"><source path="E:\my prg\CCE-Programs\MAD\Lab_7\PRG_3\app\src\main\assets"/><source path="E:\my prg\CCE-Programs\MAD\Lab_7\PRG_3\app\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="E:\my prg\CCE-Programs\MAD\Lab_7\PRG_3\app\src\debug\assets"/></dataSet></merger>

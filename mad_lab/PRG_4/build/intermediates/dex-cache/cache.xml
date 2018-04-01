@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\mahe\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="27.0.3"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="D:\MAD\mad_lab\PRG_4\app\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.2_86d3d6ad8c487d4ce07bbdfb343a9e30cad8ec8c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\MAD\mad_lab\PRG_4\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="27.0.3"
+        sha1="224b30debbb123e17a123c28afa4eaa21b6e75a9">
+        <dex dex="D:\MAD\mad_lab\PRG_4\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_f7f93cf2709b14b3ab5694adb30ec385041180bb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\mahe\.android\build-cache\8891284ae2e05974f26c0b0e015ea7cac5cedf94\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="27.0.3"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="D:\MAD\mad_lab\PRG_4\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_f4603109f3b28f05c4e1a1c1f7e48869981d50a1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\MAD\mad_lab\PRG_4\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="27.0.3"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="D:\MAD\mad_lab\PRG_4\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_7adf9eb530d35176207db3025316ee41e7c14db5\classes.dex" />
+    </item>
+
+</items>

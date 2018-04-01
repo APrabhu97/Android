@@ -1,0 +1,4 @@
+#Sun Apr 01 18:15:53 IST 2018
+base.0=D\:\\MAD\\mad_lab\\PRG_4\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_0
+renamed.0=classes.dex
+file.0=D\:\\MAD\\mad_lab\\PRG_4\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_0\\classes.dex

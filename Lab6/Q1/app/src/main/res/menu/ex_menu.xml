@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/itemi"
+        android:title="Menu Options"
+        app:showAsAction="never"
+        >
+        <menu>
+
+            <item
+                android:id="@+id/item1"
+                android:title="Courses"
+                app:showAsAction="never"
+
+                />
+            <item
+                android:id="@+id/item2"
+                android:title="Admission"
+                app:showAsAction="never"
+                />
+            <item
+                android:id="@+id/item3"
+                android:title="Faculty"
+                app:showAsAction="never"
+                />
+        </menu>
+
+    </item>
+    <item
+        android:id="@+id/item9"
+        android:title="Contact Us"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_school"
+        >
+<menu>
+    <item
+        android:id="@+id/home"
+        android:title=""
+
+        android:icon="@drawable/ic_homepage"/>
+    <item
+        android:id="@+id/about"
+        android:title=""
+        android:icon="@drawable/ic_info_black_24dp"/>
+    <item
+        android:id="@+id/contacts"
+        android:title=""
+        android:icon="@drawable/ic_contacts"/>
+</menu>
+    </item>
+
+</menu>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Q2</string>
+    <string-array name="places">
+        <item>Pune</item>
+        <item>Manipal</item>
+        <item>Jaipur</item>
+        <item>Patna</item>
+        <item>Srinagar</item>
+    </string-array>
+</resources>
