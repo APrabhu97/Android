@@ -1,1 +1,294 @@
 
+ DialogFragment dt = new DatePickerFragment();
+                dt.show(getSupportFragmentManager(), "anish");
+                
+                
+             ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.places
+                ,android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        
+        DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+         Calendar cal = Calendar.getInstance();
+         dateText.setText(dateFormat.format(cal.getTime()));
+         
+         
+         
+         
+         ToggleButton tg = (ToggleButton)findViewById(R.id.toggleButton2);
+        tg.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(b){
+                    //toggle enbled: tatkal
+                    DateFormat dateFormat = new SimpleDateFormat("HHmm");
+                    Calendar cal = Calendar.getInstance();
+                    int time = Integer.parseInt(dateFormat.format(cal.getTime()));
+                    if (time > 1100){
+                        but.setEnabled(true);
+                    }
+                    else{
+                        but.setEnabled(false);
+                        Toast.makeText(getApplicationContext(),"Tatkal onlt available after 1100 hours",Toast.LENGTH_SHORT).show();
+                    }
+                }
+                else{
+                    //toggle disabled: General
+                    but.setEnabled(true);
+                }
+            }
+        });
+        
+        
+        
+        
+        image toast:
+        
+        public class MainActivity extends Activity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        ImageView imageView = (ImageView) findViewById(R.id.imageView);
+        imageView.setImageResource(R.drawable.donut);
+        registerForContextMenu(imageView);
+
+    }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.context_menu,menu);
+    }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        TextView textView = new TextView(getApplicationContext());
+        Toast to = new Toast(getApplicationContext());
+        switch (item.getItemId()) {
+            case R.id.image1:
+                textView.setBackground(getDrawable(R.drawable.eclair));
+                to.setView(textView);
+                to.setDuration(Toast.LENGTH_SHORT);
+                to.show();
+                return true;
+            case R.id.image2:
+                textView.setBackground(getDrawable(R.drawable.froyo));
+                to.setView(textView);
+                to.setDuration(Toast.LENGTH_SHORT);
+                to.show();
+                return true;
+            default:
+                return super.onContextItemSelected(item);
+        }
+    }
+    
+    
+    
+    
+    
+    Database:
+    
+     ListView listView;
+    contacts[] con = new contacts[5];
+    Cursor resultSet;
+    public static SQLiteDatabase mydatabase;
+    public static ArrayAdapter<String> adapter;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        listView = (ListView) findViewById(R.id.list);
+
+        mydatabase = openOrCreateDatabase("myData", MODE_PRIVATE, null);
+        mydatabase.execSQL("create table if not exists Contacts(Name varchar(20), Phone varchar(12), savedin varchar(10), email varchar(50), whatsapp varchar(10));");
+       // mydatabase.execSQL("delete from Contacts");
+//        mydatabase.execSQL("Insert into Contacts values('Anish', '7829077303', 'SIM', 'anishprabhu1997@gmail.com', 'Yes')");
+//        mydatabase.execSQL("Insert into Contacts values('Adit', '9423505045', 'Phone', 'aditKaneria@gmail.com', 'Yes')");
+//        mydatabase.execSQL("Insert into Contacts values('Chirag', '8344759263', 'Phone', 'chiragIndi@gmail.com', 'No')");
+//        mydatabase.execSQL("Insert into Contacts values('Anirudh', '9724478254', 'SIM', 'anirudhRao@gmail.com', 'Yes')");
+//        mydatabase.execSQL("Insert into Contacts values('Saurav', '8546298774', 'Phone', 'sauravUpadhyay@gmail.com', 'Yes')");
+
+
+        resultSet = mydatabase.rawQuery("select * from Contacts", null);
+        resultSet.moveToFirst();
+
+        // Defined Array values to show in ListView
+
+//        con[0] = new contacts("Anish", "7829077303", "SIM", "anishprabhu1997@gmail.com", "Yes");
+//        con[1] = new contacts("Adit", "9423505045", "Phone", "aditKaneria@gmail.com", "Yes");
+//        con[2] = new contacts("Chirag", "8344759263", "Phone", "chiragIndi@gmail.com", "No");
+//        con[3] = new contacts("Anirudh", "9724478254", "SIM", "anirudhRao@gmail.com", "Yes");
+//        con[4] = new contacts("Saurav", "8546298774", "Phone", "sauravUpadhyay@gmail.com", "Yes");
+//
+//
+//        String[] values = new String[]{
+//                con[0].name,
+//                con[1].name,
+//                con[2].name,
+//                con[3].name,
+//                con[4].name,
+//                resultSet.getString(0)
+//        };
+
+        // Define a new Adapter
+        // First parameter - Context
+        // Second parameter - Layout for the row
+        // Third parameter - ID of the TextView to which the data is written
+        // Forth - the Array of data
+
+        ArrayList<String> list=new ArrayList<String>();
+        resultSet.moveToFirst();
+        while(!resultSet.isAfterLast()){
+            list.add(resultSet.getString(0));
+            resultSet.moveToNext();
+    }
+
+    adapter = new ArrayAdapter<String>(this,
+            android.R.layout.simple_list_item_1, android.R.id.text1, list);
+
+
+    // Assign adapter to ListView
+        listView.setAdapter(adapter);
+        registerForContextMenu(listView);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent myIntent = new Intent(MainActivity.this, EditContact.class);
+                myIntent.putExtra("intVariableName", i);
+                startActivity(myIntent);
+            }
+        });
+
+        // ListView Item Click Listener
+
+    }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.context_menu, menu);
+
+    }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+        switch (item.getItemId()) {
+            case R.id.msg:
+                messageUser(info.id);
+                return true;
+            case R.id.call:
+                callUser(info.id);
+                return true;
+            case R.id.saved:
+                showSaved(info.id);
+                return true;
+            case R.id.other:
+                showEmail(info.id);
+                return true;
+            default:
+                return super.onContextItemSelected(item);
+        }
+        
+        
+        
+        
+        
+        Note making app
+        
+        extView textview; String result; String fulltext;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Button button = (Button) findViewById(R.id.button);
+        registerForContextMenu(button);
+        textview = (TextView) this.findViewById(R.id.textView);
+        fulltext = textview.getText().toString();
+        Button button2 = (Button) findViewById(R.id.button2);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                textview.setText(fulltext);
+            }
+        });
+
+    }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.context_menu,menu);
+    }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.search:
+                final int index[] = new int[10];
+                LayoutInflater li = getLayoutInflater();
+                View view = li.inflate(R.layout.activity_search, null);
+
+                final AlertDialog.Builder alertdialogbuilder = new AlertDialog.Builder(MainActivity.this);
+                alertdialogbuilder.setView(view);
+
+                final EditText editText = (EditText) view.findViewById(R.id.editText);
+
+                alertdialogbuilder.setCancelable(false).setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        int flag = 0;
+                        result = editText.getText().toString();
+                        String strArray[] = fulltext.split(" ");
+                        SpannableStringBuilder sorted = new SpannableStringBuilder("");
+                        for (int j = 0; j < strArray.length; j++) {
+                            SpannableString store = new SpannableString(strArray[j]);
+                           if(strArray[j].equals(result)) {
+                                store.setSpan(new BackgroundColorSpan(Color.parseColor("yellow")),
+                                        0,strArray[j].length(),0);
+                               flag = 1;
+
+                            }
+                            sorted.append(store);
+                            sorted.append(" ");
+                        }
+                        textview.setText(sorted);
+                        if(flag == 0)
+                            Toast.makeText(MainActivity.this, "Not present", Toast.LENGTH_SHORT).show();
+
+                    }
+                })
+                        .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                dialogInterface.cancel();
+                            }
+                        });
+
+
+                AlertDialog alertDialog = alertdialogbuilder.create();
+                alertDialog.show();
+                return true;
+
+            case R.id.sort:
+                String strArray[] = fulltext.split(" ");
+                Arrays.sort(strArray);
+                String sorted = "";
+                for (int i = 0; i < strArray.length; i++) {
+                    sorted = sorted + strArray[i] + " ";
+                }
+                textview.setText(sorted);
+                return true;
+            default:
+                return super.onContextItemSelected(item);
+        }
+    }
